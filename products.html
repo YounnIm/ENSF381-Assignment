@@ -13,7 +13,7 @@
 
             }
             .product {
-                flex: 0 0 calc(50% - 10px); /* This ensures that each product takes up half the width of the container */
+                flex: 0 0 calc(50% - 10px); /* This ensures that each product will take up roughly half the width of the container (minus 10px), and will neither grow nor shrink */
                 margin-top: 100px;
                 margin-bottom: 100px;
                 text-align: center;
@@ -24,10 +24,13 @@
     </head>
     <body>
         <header>
-            <img src="" alt="Logo goes here">
-            <h1>Website Name</h1>
+            <header style="display: flex; align-items: center;">
+                <img width="100px" height="100px" src="logo.jpeg" alt="Logo">
+                <h1 style="margin-left: 10px;">EliteSale</h1>
+            </header>
         </header>
         <div>
+            <br>
             <a href="index.html">Home</a>
             <a href="products.html">Products</a>
             <a href="contact.html">Contact</a>
@@ -65,7 +68,7 @@
             </div>
         </main>
         <footer>
-            &copy; Taiwu Chen
+            &copy; Taiwu Chen, Younnus Iman
         </footer>
     </body>
 </html>
