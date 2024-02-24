@@ -49,3 +49,26 @@
 .product button:hover {
     background-color: #45A049;
 }
+
+/* Contact Information Section */
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Contact Methods */
+.contact-method {
+    background-color: #ddd;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px;
+}
+
+/* Social Media Links Hover Effect */
+a:hover {
+    color: #007BFF;
+}
