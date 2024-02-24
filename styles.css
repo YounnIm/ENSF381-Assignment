@@ -1,1 +1,74 @@
-/* This is for styling on the next assignment, don't need it now*/
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* aligns items along the horizontal line */
+    margin: 20px;
+    padding: 20px;
+    background-color: #ddd;
+    
+    
+}
+.product {
+    flex: 0 0 calc(50% - 80px); /* This ensures that each product will take up roughly half the width of the container (minus 10px), and will neither grow nor shrink */
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    
+    
+}
+
+
+.product:hover {
+    background-color: #ffffff;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* "Add to Cart" Button */
+.product button {
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background-color: #45A049;
+}
+
+/* Contact Information Section */
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Contact Methods */
+.contact-method {
+    background-color: #ddd;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px;
+}
+
+/* Social Media Links Hover Effect */
+a:hover {
+    color: #007BFF;
+}
