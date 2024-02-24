@@ -1,3 +1,71 @@
+
+/* This is mainly for index file or basic repeated css styles (example (nav bar) **/
+header {
+    background-color: #333;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+div > nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #333;
+}
+
+nav > a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+}
+
+.shop-now {
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+
+}
+.shop-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.shop-button:hover {
+    background-color: #45A049;
+    color: white;
+}
+
+.customer-reviews {
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+}
+
+footer {
+    background-color: #333;
+    padding: 10px;
+    margin: 0;
+    color: white;
+}
+
+/* This is mainly for index file or basic repeated css styles (example (nav bar) **/
+
 .product-container {
     display: flex;
     flex-wrap: wrap;
@@ -59,6 +127,8 @@ main {
     margin: 20px;
     border-radius: 10px;
 }
+
+
 
 /* Contact Methods */
 .contact-method {
