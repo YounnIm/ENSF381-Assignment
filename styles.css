@@ -1,23 +1,24 @@
-
-/* Product List Section */
 .product-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; /* aligns items along the horizontal line */
     margin: 20px;
     padding: 20px;
     background-color: #ddd;
+    
+    
 }
-
-/* Product Styling */
 .product {
+    flex: 0 0 calc(50% - 80px); /* This ensures that each product will take up roughly half the width of the container (minus 10px), and will neither grow nor shrink */
     margin: 20px;
     padding: 20px;
     text-align: center;
     background-color: #f9f9f9;
     border-radius: 10px;
-    box-sizing: border-box;
+    
+    
 }
+
 
 .product:hover {
     background-color: #ffffff;
