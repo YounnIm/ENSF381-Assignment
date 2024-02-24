@@ -64,7 +64,7 @@ footer {
     color: white;
 }
 
-/* This is mainly for index file or basic repeated css styles (example (nav bar) **/
+/* end of index **/
 
 .product-container {
     display: flex;
@@ -119,6 +119,7 @@ footer {
 }
 
 /* Contact Information Section */
+/* this css styles block causes some issues on some pages recommend looking into it**/
 main {
     display: flex;
     flex-direction: column;
