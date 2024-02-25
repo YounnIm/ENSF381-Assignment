@@ -2,9 +2,11 @@
 /* This is mainly for index file or basic repeated css styles (example (nav bar) **/
 header {
     background-color: #333;
+    color: white;
     padding: 20px;
     margin: 0;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -129,6 +131,10 @@ main {
     border-radius: 10px;
 }
 
+.home {
+    display: flex;
+    background-color: white;
+}
 
 
 /* Contact Methods */
@@ -142,4 +148,55 @@ main {
 /* Social Media Links Hover Effect */
 a:hover {
     color: #007BFF;
+}
+
+/* Login page */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.login-form label {
+    display: block;
+    margin: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.login-form button[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.login-form button[type="submit"]:hover {
+    background-color: #45A049;
+    opacity: 1.0;
+}
+
+.login-form a {
+    color: #007BFF;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
 }
