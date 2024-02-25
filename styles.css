@@ -44,6 +44,7 @@ nav > a {
     padding: 10px;
     border-radius: 5px;
     margin: 20px;
+    text-decoration: none;
 }
 
 .shop-button:hover {
@@ -121,7 +122,6 @@ footer {
 }
 
 /* Contact Information Section */
-/* this css styles block causes some issues on some pages recommend looking into it**/
 main {
     display: flex;
     flex-direction: column;
