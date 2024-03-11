@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <img src="logo.jpeg" alt="Company Logo" style="width: 100px; height: auto" />
+        <h1>EliteSale</h1>
+    </header>
+    <div>
+        <nav>
+            <!--Potential changes?-->
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </nav>
+        <!-- Navigation links go here -->
+    </div>
+    <main>
+        <section class="signup-form">
+            <h2>Signup</h2>
+            <form action="#" method="POST" id="signupForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="Enter username" />
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Enter password" />
+
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required
+                    placeholder="Confirm password" />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter email" />
+
+                <button type="button" id="signupButton">Signup</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        document.getElementById("signupButton").addEventListener("click", function () {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+            const email = document.getElementById("email").value;
+
+            const messageBox = document.getElementById("messageBox") || createMessageBox();
+            const errorMessages = validateInput(username, password, confirmPassword, email);
+            if (errorMessages.length > 0) {
+                messageBox.textContent = errorMessages.join("\n");
+            } else {
+                messageBox.textContent = "Signup successful!";
+            }
+        });
+
+        function createMessageBox() {
+            const messageBox = document.createElement("div");
+            messageBox.id = "messageBox";
+            document.body.insertBefore(
+                messageBox,
+                document.querySelector("footer")
+            );
+            return messageBox;
+        }
+
+        function validateInput(username, password, confirmPassword, email) {
+            let errors = [];
+
+            // Username validation
+            if (
+                username.length < 3 ||
+                username.length > 20 ||
+                !isAlphanumeric(username) ||
+                !isLetter(username[0])
+            ) {
+                errors.push("Invalid username.");
+            }
+
+            // Password validation
+            if (
+                password.length < 8 ||
+                !hasUppercase(password) ||
+                !hasLowercase(password) ||
+                !hasNumber(password) ||
+                !hasSpecialChar(password)
+            ) {
+                errors.push("Invalid password.");
+            }
+
+            // Confirm password validation
+            if (password !== confirmPassword) {
+                errors.push("Passwords do not match.");
+            }
+
+            // Email validation
+            if (!isValidEmail(email)) {
+                errors.push("Invalid email.");
+            }
+
+            return errors;
+        }
+
+        function isAlphanumeric(str) {
+            for (let i = 0; i < str.length; i++) {
+                let code = str.charCodeAt(i);
+                if (
+                    !(code > 47 && code < 58) && // numeric (0-9)
+                    !(code > 64 && code < 91) && // upper alpha (A-Z)
+                    !(code > 96 && code < 123) && // lower alpha (a-z)
+                    code !== 45 &&
+                    code !== 95
+                ) {
+                    // hyphen (-) and underscore (_)
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function isLetter(char) {
+            return char.toUpperCase() !== char.toLowerCase();
+        }
+
+        function hasUppercase(str) {
+            return str.toLowerCase() !== str;
+        }
+
+        function hasLowercase(str) {
+            return str.toUpperCase() !== str;
+        }
+
+        function hasNumber(str) {
+            return /\d/.test(str);
+        }
+
+        function hasSpecialChar(str) {
+            let specialChars = "!@#$%^&*()-_=+[]{}|;:'\",.<>?/`~";
+            for (let i = 0; i < str.length; i++) {
+                if (specialChars.indexOf(str[i]) !== -1) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function isValidEmail(email) {
+            let parts = email.split("@");
+            if (
+                parts.length !== 2 ||
+                parts[0].length === 0 ||
+                parts[1].length === 0
+            ) {
+                return false;
+            }
+            let domainParts = parts[1].split(".");
+            if (
+                domainParts.length < 2 ||
+                domainParts[0].length === 0 ||
+                domainParts[1].length === 0
+            ) {
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <footer>&copy; Taiwu Chen, Younnus Iman</footer>
+</body>
+
+</html>
